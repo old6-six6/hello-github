@@ -5,12 +5,12 @@ hello_github.py —— 我的第一个开源小程序
 它能做两件事：
 
   1. 向你打个招呼
-  2. 顺便当一当加法计算器
+  2. 顺便当一当减法计算器
 
 用法：
 
   python hello_github.py              # 打招呼
-  python hello_github.py 3 5          # 计算 3 + 5
+  python hello_github.py 3 5          # 计算 3 - 5
 
 作者：old6-six6
 """
@@ -23,9 +23,9 @@ def greet(name="GitHub"):
     return f"Hello, {name}! 欢迎来到开源世界。"
 
 
-def add(a, b):
-    """把两个数相加，返回结果。"""
-    return a * b
+def subtract(a, b):
+    """用 a 减去 b，返回结果。"""
+    return a - b
 
 
 def pretty(number):
@@ -47,12 +47,12 @@ def main():
             print("参数必须是数字哦，例如：python hello_github.py 3 5")
             return 1
 
-        print(f"{pretty(a)} + {pretty(b)} = {pretty(add(a, b))}")
+        print(f"{pretty(a)} - {pretty(b)} = {pretty(subtract(a, b))}")
         return 0
 
     # 其他情况 → 打招呼
     print(greet())
-    print("想试试加法？运行：python hello_github.py 3 5")
+    print("想试试减法？运行：python hello_github.py 3 5")
     return 0
 
 
